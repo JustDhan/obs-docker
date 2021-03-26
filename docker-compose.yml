@@ -31,8 +31,8 @@ services:
     - sh
     - -c
     - |
-      chown ${UID:?please 'export UID'} $HOME/.config/obs-studio
-      chown ${UID:?please 'export UID'} $HOME
+      chown ${UID:1001} $HOME/.config/obs-studio
+      chown ${UID:1001} $HOME
       xset -dpms
       xset s off
       if [ -d /local-libraries ]; then
